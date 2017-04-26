@@ -1,0 +1,20 @@
+﻿<div class="navbar navbar-default navbar-fixed-top">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+        <div class="navbar-header">
+            <a href="#/home" class="navbar-brand">&nbsp;{{data.project.name}}</a>
+            <button class="navbar-toggle" type="button" (click)="collapseIn = !collapseIn">
+                <span *ngFor="let i of [1,2,3]" class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="blink navbar-collapse collapse {{collapseIn ? 'collapse in' : ''}}" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li *ngFor="let l of data.project.links" routerLink="{{l.route}}" routerLinkActive #rla="routerLinkActive" class="btn-sm {{rla.isActive ? 'active' : ''}}">
+                    <a style="cursor:pointer;" >&nbsp;&nbsp;{{l.name}}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/tokyoite" target="_blank">By: Octavio Gomez Jr.</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

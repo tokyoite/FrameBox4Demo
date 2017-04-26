@@ -1,0 +1,3 @@
+﻿<div class='frameSelection'>
+    <img *ngFor='let f of framepieces' [src]="framing_url + 'small/' + f.packageName + '.png'" (click)="ChangePackage(f.packageName);" class="img-responsive frameCorner" />
+</div>

@@ -1,0 +1,84 @@
+﻿<div class="container animated fadeIn">
+    <h1 class='h1'>Contact</h1>
+    <hr>
+    <div class='row'>
+        <div class="col-sm-6">
+            <div class="well bs-component" style="overflow:hidden;">
+                <!--<form class="form-horizontal" #f="ngForm" name="contactForm" (ngSubmit)="submitForm()" novalidate>-->
+                    <fieldset>
+                        <legend>Contact Octavio</legend>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">First Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" placeholder="First Name:" name="firstname" [(ngModel)]="CF.firstName" type="text" required>
+                                <!--<p *ngIf="contactForm.firstname.$invalid && !contactForm.firstname.$pristine" class="help-block">You first name is required. <span class="text-danger">*</span></p>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Last Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" placeholder="Last Name:" [(ngModel)]="CF.lastName" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" placeholder="Email" name="email" [(ngModel)]="CF.email" type="text" required>
+                                <!--<p *ngIf="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">You email is required. <span class="text-danger">*</span></p>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Subject</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" placeholder="Subject" name="subject" [(ngModel)]="CF.subject" type="text" required>
+                                <!--<p *ngIf="contactForm.subject.$invalid && !contactForm.subject.$pristine" class="help-block">Subject is required. <span class="text-danger">*</span></p>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" placeholder="Message" name="message" [(ngModel)]="CF.message" rows="7" required></textarea>
+                                <!--<p *ngIf="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">Subject is required. <span class="text-danger">*</span></p>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" (click)="clearForm()" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                <!--</form>-->
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <h3 class="h3 text-center text-warning">Lead Developer <a href="https://www.facebook.com/octavio.gomez.3745?fref=ts">Octavio Gomez</a></h3>
+            <div class="col-sm-12">
+                <!--<div frame-it image="{{data.project.author.image1}}" piecename="Octavio Gomez Jr." framestyle="Package_2516" id="1"></div>-->
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <a href="#/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox.js/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
+
+            </div>
+        </div>
+    </div>
+</div>

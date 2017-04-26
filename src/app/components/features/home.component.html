@@ -1,0 +1,114 @@
+﻿<div class="container animated fadeIn">
+    <div class="bs-docs-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr />
+                <div class="bs-component">
+                    <div class="jumbotron">
+                        <h1 class="text-center">{{data.project.name}}</h1>
+                        <p class="text-center">{{data.project.description}}</p>
+                        <div class="text-center form-inline">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="#/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox.js/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="page-header" id="banner">
+        <div class="row">
+       
+
+            <div style="border-top-left-radius:15px;border-bottom-right-radius:15px;border-bottom-left-radius:15px;" class="well col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                <h3 class="text-warning">"{{pieceName}}",&nbsp; by: <a onclick="window.open('http://wylandflorida.com/#/artPiece/9726')">Jim Warren</a>  | Size: 24 x 36</h3>
+                <div class="col-sm-12">
+                    <framebox
+                              [image]="image" 
+                              [pieceName]="pieceName"
+                              [frameStyle]="frameStyle"
+                              [EnableSelection]="false"
+                              id="1"></framebox>
+                </div>
+
+            </div>
+            <div style="border-top-right-radius:15px;border-bottom-right-radius:15px;border-bottom-right-radius:15px;height:500px;overflow-y:scroll;" class="well col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <framebox-selection [(frameStyle)]="frameStyle"></framebox-selection>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <!--<div class="form-group col-sm-4">
+                    <p class="lead">Name:</p>
+                    <input type="text" placeholder="Name" class="form-control" (blur)="piecename = selectedPieceName" [(ngModel)]="selectedPieceName" />
+                </div>-->
+                <!--<div class="form-group col-sm-2">
+                <p class="lead">Dimensions:</p>
+                <input type="text" placeholder="Dimensions. 15x30 etc.. " class="form-control" (blur)="dim = selectedDim" [(ngModel)]="selectedDim" />
+            </div>-->
+                <div class="form-group col-sm-8">
+                    <p class="lead">Give it a try! Paste an image URL in the textbox below.</p>
+                    <input type="text" placeholder="Image URL here....." class="form-control" [(ngModel)]="image" />
+                </div>
+                <!--<div class="form-group col-sm-2">
+                <p class="lead">Go</p>
+                <input type="button" class="btn btn-primary" value="Generate Frame" (click)="changeImage()" />
+            </div>-->
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--<div class="row" *ngFor="let l of MyArtWork">
+        <div style="border-top-left-radius:15px;border-bottom-left-radius:15px;border-bottom-right-radius:15px" class="well col-lg-8 col-md-9 col-sm-12 col-xs-12">
+            <h3 class="text-warning">"{{l.pieceName}}",&nbsp; by: <a (click)="viewArtist(l)">{{ l.artistFirstName + ' ' + l.artistLastName}}</a>  | Size: {{l.dim}}</h3>
+            <div (click)="viewDetails(l.prodID)" class="col-sm-12">
+                <div frame-it
+                     image="{{'http://wylandflorida.com/images/' + l.artistFirstName + l.artistLastName + '/' + l.collectionID + '/thumbsXL/thumb_' + l.imgLocation}}"
+                     piecename="{{l.pieceName}}"
+                     framestyle="{{frameStyle}}"
+                     id="1"></div>
+            </div>
+
+        </div>
+
+        <div style="border-top-right-radius:15px;border-bottom-right-radius:15px;" class="well col-lg-4 col-md-3 col-sm-12 col-xs-12">
+            <div select-it=""></div>
+        </div>
+    </div>-->
+
+
+    <hr />
+
+    <div class="row">
+        <div class="well col-sm-12">
+            <h3 class="text-center">
+                Also check out,
+                <a style="color:skyblue" href="http://www.WylandFlorida.com">www.WylandFlorida.com</a> <img src="http://wylandflorida.com/Images/Logos/Logo1.png" class="animated bounceIn animation-delay-5" style="width: 75px; padding-right: 10px;">
+            </h3>
+        </div>
+    </div>
+
+</div>
+
+
+<br /><br /><br />
