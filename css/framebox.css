@@ -1,0 +1,92 @@
+﻿/*!
+* Framify.css by Octavio Gomez Jr.
+* Copyright 2015 TekAgeSolutions.com.
+*/
+.frameCorner {
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+}
+.overlay {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    z-index: +1
+}
+
+.rotate90 {
+    -moz-transform: rotate(-90.0deg);
+    -ms-transform: rotate(-90.0deg);
+    -o-transform: rotate(-90.0deg);
+    -webkit-transform: rotate(-90.0deg);
+    transform: rotate(-90.0deg);
+}
+
+.rotate180 {
+    -moz-transform: rotate(-180.0deg);
+    -ms-transform: rotate(-180.0deg);
+    -o-transform: rotate(-180.0deg);
+    -webkit-transform: rotate(-180.0deg);
+    transform: rotate(-180.0deg);
+}
+
+.rotate270 {
+    -moz-transform: rotate(-270.0deg);
+    -ms-transform: rotate(-270.0deg);
+    -o-transform: rotate(-270.0deg);
+    -webkit-transform: rotate(-270.0deg);
+    transform: rotate(-270.0deg);
+}
+
+.frameSelection {
+    padding: 20px;
+    position: absolute;
+    z-index: +2;
+    overflow-y:scroll;
+}
+
+.frameCorner:hover {
+    -moz-transform: rotate(-10.0deg);
+    -ms-transform: rotate(-10.0deg);
+    -o-transform: rotate(-10.0deg);
+    -webkit-transform: rotate(-10.0deg);
+    transform: rotate(-10.0deg);
+}
+
+.frameCorner:active {
+    -moz-transform: rotate(-10.0deg);
+    -ms-transform: rotate(-0.0deg);
+    -o-transform: rotate(-0.0deg);
+    -webkit-transform: rotate(-0.0deg);
+    transform: rotate(-0.0deg);
+}
+
+.framePart {
+    display: block;
+}
+
+.bottom, .top, .left, .right {
+    position: absolute;
+    z-index: +2;
+}
+
+.topRight, .topLeft, .bottomLeft, .bottomRight {
+    position: absolute;
+    z-index: +2;
+}
+
+.disabledSelection {
+    opacity: .6;
+    cursor: crosshair;
+}
+
+.k_shadow {
+    border: 1px solid;
+    max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: visible
+}
+
+#outerBox {
+    margin: auto;
+}

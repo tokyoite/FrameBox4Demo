@@ -13,7 +13,7 @@ import { AboutComponent } from './components/features/about.component';
 import { ContactComponent } from './components/features/contact.component';
 import { DocsComponent } from './components/features/docs.component';
 import { DataService } from './services/data.service';
-import { FrameBoxModule } from '../modules/framebox/framebox.module';
+import { FrameBoxModule } from 'framebox';
 
 
 @NgModule({

@@ -4,29 +4,7 @@ import { Http } from "@angular/http";
 //var $ : any;
 @Component({
     selector: 'framebox',
-    template: `
-<div (mouseover)="SelectFraming()" (mouseout)="ViewFraming()"  [ngStyle]="outerDivStyle" >   
-    <div *ngIf="EnableSelection" [ngStyle]="frameSelectionStyle" class='frameSelection'>
-           <img *ngFor='let f of framepieces' [src]="framing_url + 'small/' + f.packageName + '.png'" (click)="ChangePackage(f.packageName);" class="img-responsive frameCorner"/>
-    </div>
-    <div *ngIf="EnableSelection" [ngStyle]="overlayDivStyle" class="overlay"></div>
-    <div *ngIf="showFramePart">
-        <img [src]="framing_url + frameStyle + '/bottom.png'" [ngStyle]="bottomStyle" class="framePart bottom pulse" />
-        <img [src]="framing_url + frameStyle + '/top.png'" [ngStyle]="topStyle" class="framePart top rotate180 pulse" />
-        <img [src]="framing_url + frameStyle + '/left.png'" [ngStyle]="leftStyle" class="framePart left rotate180 pulse" />
-        <img [src]="framing_url + frameStyle + '/right.png'" [ngStyle]="rightStyle" class="framePart right pulse" />
-        <img [src]="framing_url + frameStyle + '/top-right.png'" [ngStyle]="topRightStyle" class="framePart topRight rotate90 pulse" />
-        <img [src]="framing_url + frameStyle + '/top-left.png'" [ngStyle]="topLeftStyle" class="framePart topLeft rotate180 pulse" />
-        <img [src]="framing_url + frameStyle + '/bottom-left.png'" [ngStyle]="bottomLeftStyle" class="framePart bottomLeft rotate270 pulse" />
-        <img [src]="framing_url + frameStyle + '/bottom-right.png'" [ngStyle]="bottomRightStyle" class="framePart bottomRight pulse" />
-    </div>
-    <img [ngStyle]="imageStyle"
-         class="innerShadow"
-         alt="{{pieceName}}"
-         title="{{pieceName}}"
-         onerror="this.src = 'http://www.experenzia.com/assets/images/planner/no-image-back.png'"/>
-</div>
-`   //templateUrl: './framebox.component.html'
+    templateUrl: './framebox.component.html'
 })
 export class FrameBoxComponent implements OnInit, OnChanges {
     @Input() frameStyle: string = null;

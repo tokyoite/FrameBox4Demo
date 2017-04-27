@@ -9,7 +9,40 @@ import { Http } from "@angular/http";
                 (click)="ChangePackage(f.packageName);"
                 class="img-responsive 
                 frameCorner"/>
-`})
+`,
+    styles: [`
+.frameCorner {
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+}
+.frameSelection {
+    padding: 20px;
+    position: absolute;
+    z-index: +2;
+    overflow-y:scroll;
+}
+
+.frameCorner:hover {
+    -moz-transform: rotate(-10.0deg);
+    -ms-transform: rotate(-10.0deg);
+    -o-transform: rotate(-10.0deg);
+    -webkit-transform: rotate(-10.0deg);
+    transform: rotate(-10.0deg);
+}
+
+.frameCorner:active {
+    -moz-transform: rotate(-10.0deg);
+    -ms-transform: rotate(-0.0deg);
+    -o-transform: rotate(-0.0deg);
+    -webkit-transform: rotate(-0.0deg);
+    transform: rotate(-0.0deg);
+}
+
+.framePart {
+    display: block;
+}
+    `]})
 export class FrameBoxSelectionComponent {
 
     private el: HTMLElement;
