@@ -10,7 +10,7 @@ export class DataService {
         project: {
             name: "FrameBox.js",
             description: "Angular Components for Generating Beautiful Framing around Images",
-            about: "FrameBoxTs was designed to be an open source framing engine for Fine Art websites to incorporate beautiful framing into their online galleries." +
+            about: "FrameBox.js was designed to be an open source framing engine for Fine Art websites to incorporate beautiful framing into their online galleries." +
             "We also provide a secondary framing service for e-commerce websites that are interested in selling high quality framing with their artwork." +
             "Please contact us by email at <a href='laila.gomez@wylandflorida.com'>laila.gomez@wylandflorida.com</a> &nbsp;" +
             "if you are interested or have any questions regarding our API.",
@@ -25,7 +25,7 @@ export class DataService {
                 image2:"../images/16387187_10102251278721763_7958877551063873192_n.jpg"
             },
             copyright: "Octavio Gomez Jr.",
-            download: "https://github.com/tokyoite/FrameBox.js/zipball/master",
+            download: "https://github.com/tokyoite/FrameBox/zipball/master",
             links: [
                 { name: "Home", route: "/home" },
                 { name: "About", route: "/about" },

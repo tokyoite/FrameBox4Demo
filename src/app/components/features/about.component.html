@@ -9,8 +9,7 @@
                 <div class="well">
                     <p>
                         FrameBox.js was designed to be an open source framing engine for Fine Art websites to incorporate beautiful framing into their online galleries.
-                        We also provide a secondary framing service for e-commerce websites that are interested in selling high quality framing with their artwork. Please contact us by email at <a href="mailTo:tavig123@hotmail.com">tavig123@hotmail.com </a> &nbsp;if you are interested or have any questions regarding our API.
-                        Directives built by <a href="{{data.project.author.git}}">Octavio Gomez Jr.</a>
+                        We also provide a secondary framing service for e-commerce websites that are interested in selling high quality framing with their artwork. Please contact us by email at <a href="mailTo:tavig123@hotmail.com">tavig123@hotmail.com </a> &nbsp;if you are interested or have any questions regarding our API.                       
                     </p>
                 </div>
             </div>
@@ -19,8 +18,8 @@
             <div class="col-md-4">
                 <h4 class="h4 text-center"><a class="ng-binding" href="mailto:{{data.project.author.email}}">Lead Developer</a></h4>
                 <section>
-                    <div class="col-sm-12">
-                        <!--<div frame-it image="{{data.project.author.image1}}" piecename="Octavio Gomez Jr." framestyle="Package_2517"></div>-->
+                    <div class="col-sm-12">                       
+                        <framebox [image]="image" [pieceName]="pieceName" [frameStyle]="frameStyle" [EnableSelection]="false"></framebox>
                     </div>
                 </section>
                 <div class="clearfix"></div>
@@ -55,8 +54,8 @@
                                 <tr>
                                     <th>Frameworks</th>
                                     <td>
-                                        <b>Backend</b>NodeJs,.NET Core, MVC and Web API Frameworks. <br />
-                                        <b>Frontend</b>: Angular 1.0, Angular 4.0, IONIC FrameWork, jQuery, Twitter Bootstrap.
+                                        <b>Backend</b>: NodeJs,.NET Core, MVC and Web API Frameworks. <br />
+                                        <b>Frontend</b>: Angular 1.0, Angular 2.0, Angular 4.0, IONIC FrameWork, jQuery, HTML5/CSS, Twitter Bootstrap.
                                     </td>
                                 </tr>
                                 <tr>
@@ -77,17 +76,23 @@
         <br />
         <div class="row">
             <div class="col-sm-12">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <a href="#/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox.js/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a routerLink="/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,141 +1,180 @@
 ﻿<br />
 <div class="container animated fadeIn">
-	<hr />
-	<h2 class='h2'>Install <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="{{data.project.download}}" class="btn btn-primary btn-lg pull-right">Download Zip</a></h2>
-	<hr />
-	<div class="well row">
-		<div class="col-sm-12">
-			<span><b>Add FrameBox.css in between head tag.</b></span>  <pre><code>&lt;link href=&quot;../App/FrameBox/FrameBox.min.css&quot; rel=&quot;stylesheet&quot; /&gt; </code></pre>
-		</div>
-		<div class="col-sm-12">
-			<span><b>Add angular core js files and FrameBox.js at end of body tag </b></span>  <pre><code>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;../App/FrameBox/FrameBox.js&quot;&gt;&lt;/script&gt; </code></pre>
-		</div>
-		<div class="col-sm-12">
-			<span><b>Create your angular module then add 'ngRoute' and 'FrameBox' to your list of included components.  </b></span>
-			<pre><code>&lt;script&gt;
-      var app = angular.module(&#39;appTest&#39;, [&#39;ngRoute&#39;, &#39;FrameBox&#39;]);
-&lt;/script&gt;</code></pre>
-		</div>
-
-	</div>
-
-	<hr />
-	<h2>Directives</h2>
-	<hr />
-	<div class="well row">
-		<div class="col-sm-12">
-			<span><b class="lead">Selector [Select-It]</b>: Provides a box with a select list of frames. Click event will update image framing.</span>
-			<pre><code>&lt;div select-it &gt;&lt;/div&gt;</code></pre>
-		</div>
-	</div>
-	<div class="well row">
-		<div class="col-sm-12">
-			<span><b class="lead">Selector [Frame-It] </b>: Generates the frame around the image. Requires values for 3 directive attributes, image, piecename, and frameStyle.  </span><br />
-			<b>Attributes</b>:
-			<div class="col-sm-12">
-				<b>-image</b>: Image URL to be framed. <br />
-				<b>-piecename</b>: Name of piece being framed. This directive will set the title attribute for the image tag equal to the provided value. <br />
-				<b>-frameStyle</b>: Identifier for type of frame style. Styles listed below.... <br /><br />
-				<i style="color:yellow">
-					Package_2514,
-					Package_2515,
-					Package_2516,
-					Package_2517,
-					Package_2519,
-					Package_2525,
-					Package_2544,
-					Package_2533,
-					Package_2552,
-					Package_2554,
-					Package_2559,
-					Package_2566,
-					Package_2567,
-					Package_2569,
-					Package_2571
-				</i>
-			</div>
-			<div class="clearfix"></div>
-			<br />
-			<pre><code>&lt;div frame-it
-                             image=&quot;http://wylandflorida.com/Images/RobKaz/26/thumbsXL/thumb_Kaz Lifting the Xwing.jpg&quot;
-                             piecename=&quot;Lifting the X-Wing&quot;
-                             framestyle=&quot;Package_2567&quot;&gt;
-                      &lt;/div&gt;</code></pre>
-		</div>
-	</div>
-	<div class="bs-docs-section">
-		<h2 id="template" class="h2 page-header">
-			<a style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;" class="anchorjs-link " href="#template" aria-label="Anchor link for: template" data-anchorjs-icon=""></a>Basic template
-		</h2>
-		<p class="lead">Start with the basic FrameBox template below. Requirements are highlighted in <b style="color:red;">RED</b> and directives hightlighted in <b style="color:blue;">BLUE</b></p>
-
-		<pre style="overflow-x:scroll;overflow:hidden;">
-		<code data-lang="html" style="">
-                  &lt;!DOCTYPE html&gt;
-&lt;html <i style="color:red;">ng-app=&quot;appTest&quot;</i> lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;title&gt;FrameBox.js Demo&lt;/title&gt;
-    &lt;!--TWITTER BOOTSTRAP CSS: OPTIONAL--&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot; integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot; crossorigin=&quot;anonymous&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css&quot; integrity=&quot;sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r&quot; crossorigin=&quot;anonymous&quot;&gt;
-    &lt;!--FRAMEBOX CSS: REQUIRED--&gt;
-		<i style="color:red;">&lt;link href=&quot;FrameBox/FrameBox.css&quot; rel=&quot;stylesheet&quot; /&gt;</i>
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;h1&gt;FrameBox.js Demo&lt;/h1&gt;
-        &lt;hr /&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;well col-lg-4 col-md-3 col-sm-12 col-xs-12&quot;&gt;
-                &lt;!--FRAME SELECTION FEATURE--&gt;
-                &lt;p class=&quot;lead text-center&quot;&gt;Select a Frame&lt;/p&gt;
-		<i style="color:blue;">&lt;div select-it &gt;&lt;/div&gt;</i>
-            &lt;/div&gt;
-            &lt;div class=&quot;well col-lg-8 col-md-9 col-sm-12 col-xs-12&quot;&gt;
-                &lt;div class=&quot;col-sm-12&quot;&gt;
-                    &lt;!--IMAGE BEING FRAMED--&gt;
-<i style="color:blue;">&lt;div  frame-it
-                          image=&quot;http://wylandflorida.com/Images/RobKaz/26/thumbsXL/thumb_KnightsofRen15x30[1].jpg&quot;
-                          piecename=&quot;Knights of Ren&quot;
-                          framestyle=&quot;Package_2567&quot;&gt;
-                      &lt;/div&gt;</i>
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;well col-lg-8 col-md-9 col-sm-12 col-xs-12&quot;&gt;
-                &lt;div class=&quot;col-sm-12&quot;&gt;
-                    &lt;!--IMAGE BEING FRAMED--&gt;
-<i style="color:blue;">&lt;div frame-it
-                         image=&quot;http://wylandflorida.com/Images/RobKaz/26/thumbsXL/thumb_Kaz Lifting the Xwing.jpg&quot;
-                         piecename=&quot;Lifting the X-Wing&quot;
-                         framestyle=&quot;Package_2567&quot;&gt;
-                     &lt;/div&gt;</i>
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;well col-lg-4 col-md-3 col-sm-12 col-xs-12&quot;&gt;
-                &lt;!--FRAME SELECTION FEATURE--&gt;
-                &lt;p class=&quot;lead text-center&quot;&gt;Select a Frame&lt;/p&gt;
-		<i style="color:blue;">&lt;div select-it&gt;&lt;/div&gt;</i>
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins): OPTIONAL --&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;!-- Latest compiled and minified JavaScript for Twitter Bootstrap: OPTIONAL  --&gt;
-    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js&quot; integrity=&quot;sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-    &lt;!--Angular Core Libraries: REQUIRED--&gt;
-<i style="color:red;">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js&quot;&gt;&lt;/script&gt;
-    &lt;!--FrameBox.js Angular Module: REQUIRED--&gt;
-    &lt;script src=&quot;FrameBox/FrameBox.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        //Create App and add FrameBox to module array
-        var app = angular.module(&#39;appTest&#39;, [&#39;ngRoute&#39;, &#39;FrameBox&#39;]);
-    &lt;/script&gt;</i>
-&lt;/body&gt;
-&lt;/html&gt;
-      </code>
+    <hr />
+    <h2 class='h2'>Install <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="{{data.project.download}}" class="btn btn-primary btn-lg pull-right">Download Zip</a></h2>
+    <hr />
+    <div class="well row">
+        <div class="col-sm-12">
+            <span><b>Download FrameBox from npm.</b></span>
+            <pre><code class="TypeScript" pCode>npm install framebox@4.3.0 </code></pre>
+        </div>
+        <div class="col-sm-12">
+            <span><b>Import FrameBoxModule from node_modules folder </b></span>
+            <pre><code class="TypeScript" pCode>import &#123; FrameBoxModule &#125; from 'framebox';</code></pre>
+        </div>
+        <div class="col-sm-12">
+            <span><b>Add FrameBoxModule to @ngModule imports. </b></span>
+            <pre>
+<code class="TypeScript" pCode>
+@NgModule(&#123;
+    &nbsp;declarations: [
+        &nbsp;&nbsp;AppComponent,
+        &nbsp;&nbsp;NavbarComponent,
+        &nbsp;&nbsp;FooterComponent
+    &nbsp;],
+    &nbsp;imports: [
+        &nbsp;&nbsp;BrowserModule,
+        &nbsp;&nbsp;FormsModule,
+        &nbsp;&nbsp;HttpModule,
+        &nbsp;&nbsp;<b>FrameBoxModule</b>
+    &nbsp;],
+    &nbsp;providers: [DataService],
+    &nbsp;bootstrap: [AppComponent]
+&#125;)   
+                </code>
 </pre>
-	</div>
+        </div>
+
+    </div>
+    <hr />
+    <h2>Usage</h2>
+    <hr />
+    <div class="well row">
+        <div class="col-sm-12">
+            <p class="lead">Typical Angular 2 component using typescript.</p>
+
+            <p></p>
+            <pre><code class="html" pCode>
+import &#123; Component &#125; from &#x27;@angular/core&#x27;;
+@Component(&#123;
+    selector: &#x27;home&#x27;,
+    templateUrl: &#x27;./home.component.html&#x27;
+&#125;)
+export class HomeComponent &#123;
+    pieceName: string = &#x22;Dog Heaven 4&#x22;;
+    selectedPieceName: string = &#x22;&#x22;;
+    imageLocation: string = &#x22;&#x22;;
+    image: string = &#x22;http://wylandflorida.com/Images/JimWarren/65/thumbsXL/thumb_Dog Heaven 4.jpg&#x22;;
+    frameStyle: string = &#x22;Package_2552&#x22;;
+
+    constructor() &#123; &#125;
+
+&#125;         
+                </code></pre>
+
+            <p class="lead">Typical Template using Twitter Bootstrap</p>
+            <pre><code class="html" pCode>
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;well col-lg-8 col-md-9 col-sm-12 col-xs-12&#x22;&#x3E;
+        &#x3C;framebox [image]=&#x22;image&#x22; [pieceName]=&#x22;pieceName&#x22; [frameStyle]=&#x22;frameStyle&#x22; [EnableSelection]=&#x22;false&#x22;&#x3E;&#x3C;/framebox&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;well col-lg-4 col-md-3 col-sm-12 col-xs-12&#x22;&#x3E;
+        &#x3C;framebox-selection [(frameStyle)]=&#x22;frameStyle&#x22;&#x3E;&#x3C;/framebox-selection&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;                
+                </code></pre>
+        </div>
+    </div>
+    <h2>Selectors</h2>
+    <hr />
+    <div class="well row">
+        <div class="col-sm-12">
+            <b class="lead">[framebox]:</b>
+            <pre><code class="TypeScript" pCode><b class="lead">&#x3C;framebox&#x3E;&#x3C;/ framebox&#x3E;</b></code></pre>
+
+            <span><b class="lead">Attributes:</b></span>
+            <table class="table table-responsive table-bordered table-hover">
+                <thead style="background-color:white;color:black;">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[image]</td>
+                        <td>(string)</td>
+                        <td>Your image URL.</td>
+                    </tr>
+                    <tr>
+                        <td>[pieceName]</td>
+                        <td>(string)</td>
+                        <td>Name of Image.</td>
+                    </tr>
+                    <tr>
+                        <td>[EnableSelection]</td>
+                        <td>(boolean)</td>
+                        <td>Enables or disables frame selection on hover.</td>
+                    </tr>
+                    <tr>
+                        <td>[frameStyle]</td>
+                        <td>(string)</td>
+                        <td>
+                            List of available packages:<br />
+                            <i style="color:yellow">
+                                Package_2514,
+                                Package_2515,
+                                Package_2516,
+                                Package_2517,
+                                Package_2519,
+                                Package_2525,
+                                Package_2544,
+                                Package_2533,
+                                Package_2552,
+                                Package_2554,
+                                Package_2559,
+                                Package_2566,
+                                Package_2567,
+                                Package_2569,
+                                Package_2571
+                            </i>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <hr />
+
+            <b class="lead">[framebox-selection]:</b>
+            <pre><code class="html" pCode>&lt;framebox-selection [(frameStyle)]="frameStyle"&gt;&lt;/framebox-selection&gt;</code></pre>
+            <table class="table table-responsive table-bordered table-hover">
+                <thead style="background-color:white;color:black;">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[frameStyle]</td>
+                        <td>(string)</td>
+                        <td>
+                            List of available packages:<br />
+
+                            <i style="color:yellow">
+                                Package_2514,
+                                Package_2515,
+                                Package_2516,
+                                Package_2517,
+                                Package_2519,
+                                Package_2525,
+                                Package_2544,
+                                Package_2533,
+                                Package_2552,
+                                Package_2554,
+                                Package_2559,
+                                Package_2566,
+                                Package_2567,
+                                Package_2569,
+                                Package_2571
+                            </i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

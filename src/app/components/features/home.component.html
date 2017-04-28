@@ -7,27 +7,28 @@
                     <div class="jumbotron">
                         <h1 class="text-center">{{data.project.name}}</h1>
                         <p class="text-center">{{data.project.description}}</p>
-                        <p style="background-color:black;color:white;text-align:center;border-radius:10px;">npm install framebox@4.3.0</p>
                         <div class="text-center form-inline">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                    <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
+                                    <a onclick="ga.push(['_trackEvent','View GitHub','zip',this.href]);" href="https://github.com/tokyoite/FrameBox" style="width:100%;" class="btn btn-primary btn-lg">View on GitHub</a>
 
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                    <a href="#/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
+                                    <a routerLink="/docs" onclick="ga.push(['_trackEvent','View Docs','Documentation',this.href]);" class="btn btn-primary btn-lg" style="width:100%;">View Docs</a>
 
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                    <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox.js/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
+                                    <a onclick="ga.push(['_trackEvent','Download','zip',this.href]);" href="https://github.com/tokyoite/FrameBox/zipball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .zip</a>
 
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                    <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox.js/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
+                                    <a onclick="ga.push(['_trackEvent', 'Download', '.tar.gz', this.href]);" href="https://github.com/tokyoite/FrameBox/tarball/master" style="width:100%;" class="btn btn-primary btn-lg">Download .tar.gz</a>
 
                                 </div>
                             </div>
                         </div>
+                        <br/>
+                        <!--<pre><code class="typescript" pCode>npm install framebox@4.3.0 -save</code></pre>-->
                     </div>
                 </div>
             </div>
@@ -42,12 +43,7 @@
             <div style="border-top-left-radius:15px;border-bottom-right-radius:15px;border-bottom-left-radius:15px;" class="well col-lg-8 col-md-9 col-sm-12 col-xs-12">
                 <h3 class="text-warning">"{{pieceName}}",&nbsp; by: <a onclick="window.open('http://wylandflorida.com/#/artPiece/9726')">Jim Warren</a>  | Size: 24 x 36</h3>
                 <div class="col-sm-12">
-                    <framebox
-                              [image]="image" 
-                              [pieceName]="pieceName"
-                              [frameStyle]="frameStyle"
-                              [EnableSelection]="false"
-                              id="1"></framebox>
+                    <framebox [image]="image" [pieceName]="pieceName" [frameStyle]="frameStyle" [EnableSelection]="false"></framebox>
                 </div>
 
             </div>

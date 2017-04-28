@@ -14,7 +14,7 @@ import { ContactComponent } from './components/features/contact.component';
 import { DocsComponent } from './components/features/docs.component';
 import { DataService } from './services/data.service';
 import { FrameBoxModule } from 'framebox';
-
+import { CodeHighlighterModule } from 'primeng/primeng';
 
 @NgModule({
     declarations: [
@@ -31,6 +31,7 @@ import { FrameBoxModule } from 'framebox';
         FormsModule,
         HttpModule,
         FrameBoxModule,
+        CodeHighlighterModule,
         RouterModule.forRoot([
             { path: '', redirectTo: '/home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
