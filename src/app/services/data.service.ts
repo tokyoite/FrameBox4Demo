@@ -28,8 +28,8 @@ export class DataService {
             download: "https://github.com/tokyoite/FrameBox/zipball/master",
             links: [
                 { name: "Home", route: "/home" },
-                { name: "About", route: "/about" },
-                { name: "Docs", route: "/docs" },
+                //{ name: "About", route: "/about" },
+                //{ name: "Docs", route: "/docs" },
                 { name: "Contact", route: "/contact" },
             ]
         },
